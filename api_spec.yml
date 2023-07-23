@@ -1,0 +1,17 @@
+openapi: "3.0.3"
+
+info:
+  title: "Meigen API"
+  version: "0.1"
+
+paths:
+  "/api/test":
+    get:
+      summary: ""
+      responses:
+        "200":
+          description: "Success"
+          content:
+            application:/json:
+              schema:
+                type: string

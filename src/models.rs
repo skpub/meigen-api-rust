@@ -1,8 +1,9 @@
-use crate::schema::posts;
-use uuid::Uuid;
+use serde::{Deserialize, Serialize};
+use tokio_pg_mapper_derive::PostgresMapper;
 
-#[derive(Debug, Queryable)]
+#[derive(Deserialize, PostgresMapper, Serialize)]
+#[pg_mapper(table="users")]
 pub struct User {
-    pub id: Uuid,
-    
+    pub name: String,
+    pub pwhash: String
 }

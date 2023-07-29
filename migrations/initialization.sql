@@ -1,0 +1,7 @@
+DROP SCHEMA IF EXISTS meigen CASCADE;
+CREATE SCHEMA meigen;
+
+CREATE TABLE meigen.users (
+    name VARCHAR(200) UNIQUE NOT NULL,
+    pwhash VARCHAR(200) NOT NULL
+);

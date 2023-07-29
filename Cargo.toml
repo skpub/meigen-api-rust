@@ -10,10 +10,11 @@ actix-web = "4"
 actix-rt = "2.8.0"
 dotenv = "0.15.0"
 chrono = "0.4"
-ulid = "1.0.0"
+uuid = { version = "1.4.1", features = ["v4", "serde", "fast-rng", "macro-diagnostics"]}
+pwhash = "1.0.0"
 derive_more = "0.99.16"
 deadpool-postgres = { version = "0.10.2", features = ["serde"] }
-serde = { version = "1.0.137", features = ["derive"]}
+serde = { version = "1.0.137", features = ["derive"] }
 tokio-pg-mapper = "0.2.0"
 tokio-pg-mapper-derive = "0.2.0"
 tokio-postgres = "0.7.6"
